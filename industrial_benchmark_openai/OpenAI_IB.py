@@ -135,7 +135,7 @@ class OpenAI_IB(gym.Env):
                         raise ValueError('Invalid reward function specification. "classic" for the original cost function or "delta" for the change in the cost fucntion between steps.')
 
                 # Print to track agent & environment during training
-                print( ' Cost smoothed:', -self.smoothed_cost, ' State (v,g,s):', np.around(self.IB.visibleState()[1:4], 0), '\t Action: ', _action,)
+                #print( ' Cost smoothed:', -self.smoothed_cost, ' State (v,g,s):', np.around(self.IB.visibleState()[1:4], 0), '\t Action: ', _action,)
 
                 self.info = self.markovianState()
                 # reward is divided by 100 to improve learning
